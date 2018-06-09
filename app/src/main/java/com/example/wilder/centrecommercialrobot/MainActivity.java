@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnShop = findViewById(R.id.btn_shop);
         Button btnCaddy = findViewById(R.id.btn_caddy);
-        Button btnCash = findViewById(R.id.btn_dollars);
         Button btnHome = findViewById(R.id.btn_home);
         Button btnHours = findViewById(R.id.btn_hours);
         final TextView tvResponse = findViewById(R.id.tv_response);
@@ -32,14 +31,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        redirection(btnCaddy);
-        redirection(btnCash);
-        redirection(btnHome);
-        redirection(btnShop);
+        String caddy = "caddy";
+        String home = "home";
+        String shop = "shop";
+
+        redirection(btnCaddy,caddy);
+        redirection(btnHome,home);
+        redirection(btnShop,shop);
 
     }
 
-    public void redirection(Button btn){
+    public void redirection(Button btn, final String request){
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                        intent.putExtra("request", request);
                         MainActivity.this.startActivity(intent);
                     }
                 }, SPLASH_TIME_OUT);

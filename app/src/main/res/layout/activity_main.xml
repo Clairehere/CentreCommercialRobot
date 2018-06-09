@@ -37,27 +37,22 @@
     <TextView
         android:id="@+id/tv_help"
         android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:text="Besoin d'aide .Je suis la pour vous"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="97dp" />
-
-    <TextView
-        android:id="@+id/tv_demand"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Votre demande concerne"
-        app:layout_constraintTop_toBottomOf="@+id/tv_help"
-        tools:layout_editor_absoluteX="191dp" />
+        android:text="Besoin d'aide.Je suis la pour vous\n Votre demande concerne :"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:layout_editor_absoluteX="86dp" />
 
     <LinearLayout
+        android:id="@+id/ll_btn"
         android:layout_width="174dp"
         android:layout_height="307dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/tv_demand"
-        tools:layout_editor_absoluteX="182dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_help">
 
         <Button
             android:id="@+id/btn_shop"
@@ -104,5 +99,13 @@
             tools:layout_editor_absoluteX="49dp"
             tools:layout_editor_absoluteY="315dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nous sommes ouvert : \nDu Lundi au Samedi\n De 9h à 20h"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="412dp" />
 
 </android.support.constraint.ConstraintLayout>

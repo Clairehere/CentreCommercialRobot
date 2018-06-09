@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 2000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnCaddy = findViewById(R.id.btn_caddy);
         Button btnHome = findViewById(R.id.btn_home);
         Button btnHours = findViewById(R.id.btn_hours);
+        final Button btnOther = findViewById(R.id.btn_other);
         final TextView tvResponse = findViewById(R.id.tv_response);
         final LinearLayout llBtn = findViewById(R.id.ll_btn);
 
@@ -28,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvResponse.setVisibility(View.VISIBLE);
                 llBtn.setVisibility(View.INVISIBLE);
+                btnOther.setVisibility(View.VISIBLE);
+                btnOther.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                        MainActivity.this.startActivity(intent);
+                    }
+                });
             }
         });
 
@@ -35,13 +45,14 @@ public class MainActivity extends AppCompatActivity {
         String home = "home";
         String shop = "shop";
 
-        redirection(btnCaddy,caddy);
-        redirection(btnHome,home);
-        redirection(btnShop,shop);
+        redirection(btnCaddy, caddy);
+        redirection(btnHome, home);
+        redirection(btnShop, shop);
+
 
     }
 
-    public void redirection(Button btn, final String request){
+    public void redirection(Button btn, final String request) {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 }, SPLASH_TIME_OUT);
             }
         });
-
-
 
 
     }

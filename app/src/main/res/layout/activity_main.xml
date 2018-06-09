@@ -47,6 +47,7 @@
         android:gravity="center"
         android:text="Besoin d'aide.Je suis la pour vous\n Votre demande concerne :"
         android:textColor="@android:color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
@@ -114,7 +115,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Nous sommes ouvert : \nDu Lundi au Samedi\n De 9h à 20h"
@@ -123,6 +126,24 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/iv_robot"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_robot"
         app:layout_constraintTop_toTopOf="@+id/iv_robot" />
+
+    <Button
+        android:id="@+id/btn_other"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn"
+        android:text="Autres questions"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_robot"
+        app:layout_constraintTop_toBottomOf="@+id/tv_response" />
 
 </android.support.constraint.ConstraintLayout>

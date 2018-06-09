@@ -1,4 +1,32 @@
 <resources>
     <string name="app_name">CentreCommercialRobot</string>
     <string name="infos">Desciption : ec minus feminae quoque calamitatum participes fuere similium. nam ex hoc quoque sexu peremptae sunt originis altae conplures, adulteriorum flagitiis obnoxiae vel stuprorum. inter quas notiores fuere Claritas et Flaviana</string>
+    <string name="shop">Vos magasins</string>
+    <string name="back_map">Retourner sur le plan</string>
+    <string name="welcome">Bienvenue au Centre Commercial   de Toulouse</string>
+    <string name="help">Besoin d\'aide.Je suis la pour vous  Votre demande concerne :</string>
+    <string name="hours">Les horaires d\'ouvertures</string>
+    <string name="home">Accueil du magasin</string>
+    <string name="caddy">Les points de retraits des caddies</string>
+    <string name="go_commerce">Les commerces</string>
+    <string name="infos_hours">Nous sommes ouvert :  Du Lundi au Samedi  De 9h à 20h</string>
+    <string name="questions">Autres questions</string>
+    <string name="obnoxiae">Obnoxiae</string>
+    <string name="c1">C1</string>
+    <string name="similium">Similium</string>
+    <string name="c2">C2</string>
+    <string name="secreto">Secreto</string>
+    <string name="a2">A2</string>
+    <string name="necminus">Necminus</string>
+    <string name="a1">A1</string>
+    <string name="permissa">Permissa</string>
+    <string name="b1">B1</string>
+    <string name="convictus">Convictus</string>
+    <string name="b2">B2</string>
+    <string name="carnifex">Carnifex</string>
+    <string name="b3">B3</string>
+    <string name="list_shop">Consulter la liste des magasins</string>
+    <string name="here">Vous êtes ici</string>
+    <string name="name">Name</string>
+    <string name="localisation">Localisation</string>
 </resources>

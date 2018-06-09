@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Name"
+        android:text="@string/name"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp" />
 
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Localisation"
+        android:text="@string/localisation"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp" />
 </LinearLayout>

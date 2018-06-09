@@ -24,6 +24,7 @@ public class ListActivity extends AppCompatActivity {
         SearchView searchView = findViewById(R.id.search_view);
         Button btnBack = findViewById(R.id.btn_back);
 
+
         final ArrayList<ItemsModel> shopList = new ArrayList<>();
         shopList.add(new ItemsModel("Necminus femi", "A1"));
         shopList.add(new ItemsModel("Secreto", "A2"));
@@ -51,13 +52,13 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
-       btnBack.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent = new Intent(ListActivity.this, MapsActivity.class);
-               startActivity(intent);
-           }
-       });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListActivity.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

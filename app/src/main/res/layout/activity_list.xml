@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_shop" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_shop"
+        />
 
     <TextView
         android:id="@+id/tv_shop"
@@ -30,7 +31,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Vos magasins"
+        android:text="@string/shop"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:background="#ffffff"
-        android:columnWidth="100dp"
+        android:columnWidth="150dp"
         android:gravity="center"
         android:horizontalSpacing="10dp"
         android:numColumns="auto_fit"
@@ -67,7 +68,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn"
-        android:text="Retourner sur le plan"
+        android:text="@string/back_map"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/grid_view" />

@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:id="@+id/ll_right"
-        android:layout_width="96dp"
+        android:layout_width="100dp"
         android:layout_height="174dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -18,55 +18,79 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_caddy1">
 
         <android.support.constraint.ConstraintLayout
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@color/colorPrimary">
+            android:background="@android:color/holo_green_light">
 
             <TextView
                 android:id="@+id/tv_name6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom"
-                tools:layout_editor_absoluteX="29dp"
-                tools:layout_editor_absoluteY="38dp" />
+                android:layout_marginEnd="7dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Obnoxiae"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_localisation_c1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="C1"
-                tools:layout_editor_absoluteX="60dp"
-                tools:layout_editor_absoluteY="44dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name6" />
 
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
-            android:layout_width="132dp"
-            android:layout_height="80dp"
-            android:background="@color/colorAccent">>
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_blue_light">>
 
             <TextView
                 android:id="@+id/tv_name7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom"
-                tools:layout_editor_absoluteX="29dp"
-                tools:layout_editor_absoluteY="31dp" />
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Similium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_localisation_c2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="C2"
-                tools:layout_editor_absoluteX="37dp"
-                tools:layout_editor_absoluteY="52dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name7" />
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_left"
-        android:layout_width="96dp"
+        android:layout_width="100dp"
         android:layout_height="173dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
@@ -76,48 +100,72 @@
         app:layout_constraintTop_toBottomOf="@+id/ll_top">
 
         <android.support.constraint.ConstraintLayout
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@color/colorPrimary">
+            android:background="@android:color/holo_red_light">
 
             <TextView
                 android:id="@+id/tv_name2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom"
-                tools:layout_editor_absoluteX="27dp"
-                tools:layout_editor_absoluteY="39dp" />
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Secreto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_localisation_a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="A2"
-                tools:layout_editor_absoluteX="41dp"
-                tools:layout_editor_absoluteY="60dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name2" />
 
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
-            android:layout_width="132dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:background="@color/colorAccent">>
 
             <TextView
                 android:id="@+id/tv_name1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom"
-                tools:layout_editor_absoluteX="30dp"
-                tools:layout_editor_absoluteY="31dp" />
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Necminus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_localisation_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="A1"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="50dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name1" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -140,23 +188,35 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="132dp"
             android:layout_height="80dp"
-            android:background="@color/colorAccent">
+            android:background="@android:color/holo_blue_dark">
 
             <TextView
                 android:id="@+id/tv_name3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom"
-                tools:layout_editor_absoluteX="61dp"
-                tools:layout_editor_absoluteY="32dp" />
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Permissa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_localisation_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="B1"
-                tools:layout_editor_absoluteX="65dp"
-                tools:layout_editor_absoluteY="46dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name3" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -169,40 +229,64 @@
                 android:id="@+id/tv_name4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom"
-                tools:layout_editor_absoluteX="36dp"
-                tools:layout_editor_absoluteY="31dp" />
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Convictus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_localisation_b2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="B2"
-                tools:layout_editor_absoluteX="53dp"
-                tools:layout_editor_absoluteY="50dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name4" />
 
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="130dp"
             android:layout_height="80dp"
-            android:background="@color/colorPrimaryDark">
+            android:background="@android:color/holo_orange_light">
 
             <TextView
                 android:id="@+id/tv_name5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nom"
-                tools:layout_editor_absoluteX="42dp"
-                tools:layout_editor_absoluteY="32dp" />
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Carnifex"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_localisation_b3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="B3"
-                tools:layout_editor_absoluteX="42dp"
-                tools:layout_editor_absoluteY="45dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name5" />
 
         </android.support.constraint.ConstraintLayout>
     </LinearLayout>
@@ -231,8 +315,8 @@
 
     <ImageView
         android:id="@+id/iv_caddy1"
-        android:layout_width="66dp"
-        android:layout_height="68dp"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
@@ -250,6 +334,7 @@
 
     <Button
         android:id="@+id/btn_list"
+        android:background="@drawable/btn"
         android:layout_width="349dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

@@ -8,18 +8,18 @@
 
     <ImageView
         android:id="@+id/iv_robot"
-        android:layout_width="168dp"
-        android:layout_height="263dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="144dp"
+        android:layout_height="236dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_help"
         app:srcCompat="@drawable/icons8_robot_3_80" />
 
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="229dp"
+        android:layout_width="322dp"
         android:layout_height="61dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -29,6 +29,7 @@
         android:gravity="center"
         android:text="Bienvenue au Centre Commercial \n de Toulouse"
         android:textColor="@android:color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,65 +39,90 @@
         android:id="@+id/tv_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
         android:text="Besoin d'aide.Je suis la pour vous\n Votre demande concerne :"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        tools:layout_editor_absoluteX="86dp" />
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <LinearLayout
         android:id="@+id/ll_btn"
-        android:layout_width="174dp"
-        android:layout_height="307dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="195dp"
+        android:layout_height="243dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_help">
 
         <Button
-            android:id="@+id/btn_shop"
+            android:id="@+id/btn_hours"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="Les commerces"
-            tools:layout_editor_absoluteX="205dp"
-            tools:layout_editor_absoluteY="231dp" />
-
-        <Button
-            android:id="@+id/btn_caddy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Les points de retraits des caddies"
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="365dp" />
+            android:background="@drawable/btn"
+            android:text="Les horaires d'ouvertures"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="315dp" />
 
         <Button
             android:id="@+id/btn_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
+            android:background="@drawable/btn"
             android:text="Accueil du magasin"
             tools:layout_editor_absoluteX="155dp"
             tools:layout_editor_absoluteY="432dp" />
 
         <Button
-            android:id="@+id/btn_hours"
+            android:id="@+id/btn_caddy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="Les horaires d'ouvertures"
-            tools:layout_editor_absoluteX="49dp"
-            tools:layout_editor_absoluteY="315dp" />
+            android:background="@drawable/btn"
+            android:text="Les points de retraits des caddies"
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <Button
+            android:id="@+id/btn_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:text="Les commerces"
+            tools:layout_editor_absoluteX="205dp"
+            tools:layout_editor_absoluteY="231dp" />
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/tv_response"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:text="Nous sommes ouvert : \nDu Lundi au Samedi\n De 9h à 20h"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="412dp" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_robot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_robot" />
 
 </android.support.constraint.ConstraintLayout>

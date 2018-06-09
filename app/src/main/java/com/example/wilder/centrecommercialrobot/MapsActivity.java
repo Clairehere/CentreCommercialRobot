@@ -31,19 +31,17 @@ public class MapsActivity extends AppCompatActivity {
 
         String request = getIntent().getStringExtra("request");
 
-        if (request.equals("caddy")){
+        if (request != null && request.equals("caddy")){
             ivCaddy1.startAnimation(alphaAnimation);
             ivCaddy2.startAnimation(alphaAnimation);
 
-        }else if (request.equals("home")){
+        }else if (request != null && request.equals("home")){
 
         }
 
         String shop = getIntent().getStringExtra("shop");
 
-        if(shop != null){
 
-        }
 
         Button btnList = findViewById(R.id.btn_list);
         btnList.setOnClickListener(new View.OnClickListener() {

@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.SearchView;
+
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
@@ -22,7 +23,6 @@ public class ListActivity extends AppCompatActivity {
         GridView gridView = findViewById(R.id.grid_view);
         SearchView searchView = findViewById(R.id.search_view);
         Button btnBack = findViewById(R.id.btn_back);
-
 
         final ArrayList<ItemsModel> shopList = new ArrayList<>();
         shopList.add(new ItemsModel("Necminus femi", "A1"));

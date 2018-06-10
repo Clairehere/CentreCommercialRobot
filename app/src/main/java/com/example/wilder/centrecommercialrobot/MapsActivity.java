@@ -7,20 +7,14 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.DragEvent;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.util.Random;
 
 public class MapsActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
@@ -72,8 +66,8 @@ public class MapsActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -550).setDuration(400).start();
-                    ObjectAnimator.ofFloat(ivRobot, "translationX", 0, -150).setDuration(400).start();
+                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -550).setDuration(600).start();
+                    ObjectAnimator.ofFloat(ivRobot, "translationX", 0, -150).setDuration(600).start();
 
 
                 }
@@ -85,7 +79,7 @@ public class MapsActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -700).setDuration(400).start();
+                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -700).setDuration(600).start();
 
 
                 }
@@ -98,8 +92,8 @@ public class MapsActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -350).setDuration(400).start();
-                    ObjectAnimator.ofFloat(ivRobot, "translationX", 0, 150).setDuration(400).start();
+                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -350).setDuration(600).start();
+                    ObjectAnimator.ofFloat(ivRobot, "translationX", 0, 150).setDuration(600).start();
 
 
                 }
@@ -140,9 +134,9 @@ public class MapsActivity extends AppCompatActivity {
         public boolean onDrag(View v, DragEvent event) {
             int dragEvent = event.getAction();
             final View view = (View) event.getLocalState();
-            String time1 = "Temps de marche : 1 min";
-            String time2 = "Temps de marche : 2 min";
-            String time3 = "Temps de marche : 3 min";
+            String time1 = getString(R.string.time1);
+            String time2 = getString(R.string.time2);
+            String time3 = getString(R.string.time3);
 
             switch (dragEvent) {
                 case DragEvent.ACTION_DRAG_ENTERED:

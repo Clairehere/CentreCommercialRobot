@@ -1,11 +1,9 @@
 package com.example.wilder.centrecommercialrobot;
 
-import android.widget.ImageView;
 
 public class ItemsModel {
     private String name;
     private String localisation;
-
 
 
     public ItemsModel(String name, String localisation) {

@@ -1,21 +1,15 @@
 package com.example.wilder.centrecommercialrobot;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
-
-import static java.security.AccessController.getContext;
 
 public class GridAdapter extends BaseAdapter implements Filterable {
 
@@ -61,11 +55,8 @@ public class GridAdapter extends BaseAdapter implements Filterable {
         final TextView tvName = convertView.findViewById(R.id.tv_name);
         TextView tvLocalisation = convertView.findViewById(R.id.tv_localisation);
 
-
         tvName.setText(items.getName());
         tvLocalisation.setText(items.getLocalisation());
-
-
 
         return convertView;
     }

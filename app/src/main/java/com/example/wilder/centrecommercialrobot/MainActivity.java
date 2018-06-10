@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         final TextView tvResponse = findViewById(R.id.tv_response);
         final LinearLayout llBtn = findViewById(R.id.ll_btn);
 
+        String caddy = "caddy";
+        String home = "home";
+        String shop = "shop";
+
         btnHours.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String caddy = "caddy";
-        String home = "home";
-        String shop = "shop";
+
 
         redirection(btnCaddy, caddy);
         redirection(btnHome, home);

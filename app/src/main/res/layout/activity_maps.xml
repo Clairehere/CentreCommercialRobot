@@ -295,11 +295,11 @@
         android:id="@+id/iv_here"
         android:layout_width="60dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="172dp"
-        android:layout_marginRight="172dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_here"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_home"
         app:srcCompat="@drawable/icons8_epingle_de_carte_48" />
 
     <ImageView
@@ -363,24 +363,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/here"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/btn_list"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/ll_move"
-        android:layout_width="match_parent"
-        android:layout_height="345dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/iv_here" />
 
     <TextView
         android:id="@+id/tv_teleportation"
@@ -391,10 +380,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Désolé la téléportation n'esr pas encore disponible"
-        android:visibility="visible"
+        android:textColor="@android:color/black"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/btn_list"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_here" />
 
 </android.support.constraint.ConstraintLayout>

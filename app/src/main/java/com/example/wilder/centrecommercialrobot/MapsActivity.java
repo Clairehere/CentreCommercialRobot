@@ -2,6 +2,7 @@ package com.example.wilder.centrecommercialrobot;
 
 import android.content.ClipData;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.DragEvent;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MapsActivity extends AppCompatActivity {
+    private static int SPLASH_TIME_OUT = 900;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +32,12 @@ public class MapsActivity extends AppCompatActivity {
         ImageView ivHome = findViewById(R.id.iv_home);
         ImageView ivhere = findViewById(R.id.iv_here);
         TextView tv_here = findViewById(R.id.tv_here);
-        LinearLayout llMove = findViewById(R.id.ll_move);
+
         LinearLayout llLeft = findViewById(R.id.ll_left);
         LinearLayout llTop = findViewById(R.id.ll_top);
         LinearLayout llRight = findViewById(R.id.ll_right);
 
 
-        llMove.setOnDragListener(dragListener);
         llLeft.setOnDragListener(dragListener);
         llTop.setOnDragListener(dragListener);
         llRight.setOnDragListener(dragListener);
@@ -56,8 +57,6 @@ public class MapsActivity extends AppCompatActivity {
         } else if (request != null && request.equals("home")) {
 
         }
-
-        String shop = getIntent().getStringExtra("shop");
 
 
         Button btnList = findViewById(R.id.btn_list);
@@ -86,6 +85,9 @@ public class MapsActivity extends AppCompatActivity {
         public boolean onDrag(View v, DragEvent event) {
             int dragEvent = event.getAction();
             final View view = (View) event.getLocalState();
+            String time1 = "Temps de marche : 1 min";
+            String time2 = "Temps de marche : 2 min";
+            String time3 = "Temps de marche : 3 min";
 
             switch (dragEvent) {
                 case DragEvent.ACTION_DRAG_ENTERED:
@@ -99,21 +101,13 @@ public class MapsActivity extends AppCompatActivity {
 
                     if (view.getId() == R.id.iv_here && v.getId() == R.id.ll_left) {
 
-                        TextView tvTime = findViewById(R.id.tv_teleportation);
-                        tvTime.setVisibility(View.VISIBLE);
-                        tvTime.setText(R.string.time1);
-                    }
+                        actionMove(time2);
+                    } else if (view.getId() == R.id.iv_here && v.getId() == R.id.ll_right) {
 
-                    else if (view.getId() == R.id.iv_here && v.getId() == R.id.ll_right) {
-
-                        TextView tvTime = findViewById(R.id.tv_teleportation);
-                        tvTime.setVisibility(View.VISIBLE);
-                        tvTime.setText(R.string.time2);
+                        actionMove(time1);
                     } else if (view.getId() == R.id.iv_here && v.getId() == R.id.ll_top) {
 
-                        TextView tvTime = findViewById(R.id.tv_teleportation);
-                        tvTime.setVisibility(View.VISIBLE);
-                        tvTime.setText(R.string.time3);
+                        actionMove(time3);
 
 
                     }
@@ -126,6 +120,18 @@ public class MapsActivity extends AppCompatActivity {
             return true;
         }
     };
+
+    public void actionMove(String time) {
+        final TextView tvTime = findViewById(R.id.tv_teleportation);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                tvTime.setVisibility(View.VISIBLE);
+            }
+        }, SPLASH_TIME_OUT);
+
+        tvTime.setText(time);
+    }
 }
 
 

@@ -382,7 +382,6 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Désolé la téléportation n'esr pas encore disponible"
         android:textColor="@android:color/black"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/btn_list"
@@ -397,7 +396,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/btn"
-        android:text="Retour"
+        android:text="@string/back"
         app:layout_constraintBottom_toTopOf="@+id/tv_teleportation"
         app:layout_constraintTop_toBottomOf="@+id/iv_caddy2"
         tools:layout_editor_absoluteX="7dp" />

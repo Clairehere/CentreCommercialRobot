@@ -32,4 +32,5 @@
     <string name="time1">Temps de marche : 2 min</string>
     <string name="time2">Temps de marche : 1 min</string>
     <string name="time3">Temps de marche : 3 min</string>
+    <string name="back">Retour</string>
 </resources>

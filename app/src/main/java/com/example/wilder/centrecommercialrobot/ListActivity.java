@@ -9,8 +9,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.SearchView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {

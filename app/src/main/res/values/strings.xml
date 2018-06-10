@@ -29,4 +29,7 @@
     <string name="here">Vous êtes ici</string>
     <string name="name">Name</string>
     <string name="localisation">Localisation</string>
+    <string name="time1">Temps de marche : 2 min</string>
+    <string name="time2">Temps de marche : 1 min</string>
+    <string name="time3">Temps de marche : 3 min</string>
 </resources>

@@ -29,7 +29,8 @@
         android:gravity="center"
         android:text="@string/welcome"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,6 +76,17 @@
             tools:layout_editor_absoluteY="315dp" />
 
         <Button
+            android:id="@+id/btn_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:text="@string/go_commerce"
+            tools:layout_editor_absoluteX="205dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <Button
             android:id="@+id/btn_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,17 +107,6 @@
             android:text="@string/caddy"
             tools:layout_editor_absoluteX="104dp"
             tools:layout_editor_absoluteY="365dp" />
-
-        <Button
-            android:id="@+id/btn_shop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/btn"
-            android:text="@string/go_commerce"
-            tools:layout_editor_absoluteX="205dp"
-            tools:layout_editor_absoluteY="231dp" />
 
     </LinearLayout>
 

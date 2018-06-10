@@ -67,9 +67,6 @@ public class GridAdapter extends BaseAdapter implements Filterable {
 
 
 
-
-
-
         return convertView;
     }
 

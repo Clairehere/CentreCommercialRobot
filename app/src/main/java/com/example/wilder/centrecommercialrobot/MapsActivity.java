@@ -36,7 +36,6 @@ public class MapsActivity extends AppCompatActivity {
         ImageView ivhere = findViewById(R.id.iv_here);
         final ImageView ivRobot = findViewById(R.id.iv_robot);
         TextView tvHere = findViewById(R.id.tv_here);
-        TextView tvLocalisation = findViewById(R.id.tv_localisation);
 
         LinearLayout llLeft = findViewById(R.id.ll_left);
         LinearLayout llTop = findViewById(R.id.ll_top);
@@ -68,7 +67,7 @@ public class MapsActivity extends AppCompatActivity {
         }
 
         if (nameShop != null && (nameShop.equals("A1") || nameShop.equals("A2"))) {
-            tvLocalisation.setVisibility(View.VISIBLE);
+            visibility();
 
             new Handler().postDelayed(new Runnable() {
                 @Override
@@ -81,7 +80,7 @@ public class MapsActivity extends AppCompatActivity {
             }, SPLASH_TIME_OUT);
         }
         if (nameShop != null && (nameShop.equals("B1") || nameShop.equals("B2") || nameShop.equals("B3"))) {
-            tvLocalisation.setVisibility(View.VISIBLE);
+            visibility();
 
             new Handler().postDelayed(new Runnable() {
                 @Override
@@ -94,7 +93,7 @@ public class MapsActivity extends AppCompatActivity {
 
         }
         if (nameShop != null && (nameShop.equals("C1") || nameShop.equals("C2"))) {
-            tvLocalisation.setVisibility(View.VISIBLE);
+            visibility();
 
             new Handler().postDelayed(new Runnable() {
                 @Override
@@ -186,6 +185,13 @@ public class MapsActivity extends AppCompatActivity {
         }, SPLASH_TIME_OUT);
 
         tvTime.setText(time);
+    }
+
+    public void visibility() {
+        TextView tvLocalisation = findViewById(R.id.tv_localisation);
+        ImageView ivRobot = findViewById(R.id.iv_robot);
+        tvLocalisation.setVisibility(View.VISIBLE);
+        ivRobot.setVisibility(View.VISIBLE);
     }
 }
 

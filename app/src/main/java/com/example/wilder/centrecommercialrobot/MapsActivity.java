@@ -1,5 +1,6 @@
 package com.example.wilder.centrecommercialrobot;
 
+import android.animation.ObjectAnimator;
 import android.content.ClipData;
 import android.content.Intent;
 import android.os.Handler;
@@ -17,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Random;
 
 public class MapsActivity extends AppCompatActivity {
@@ -31,7 +34,9 @@ public class MapsActivity extends AppCompatActivity {
         ImageView ivCaddy2 = findViewById(R.id.iv_caddy2);
         ImageView ivHome = findViewById(R.id.iv_home);
         ImageView ivhere = findViewById(R.id.iv_here);
-        TextView tv_here = findViewById(R.id.tv_here);
+        final ImageView ivRobot = findViewById(R.id.iv_robot);
+        TextView tvHere = findViewById(R.id.tv_here);
+        TextView tvLocalisation = findViewById(R.id.tv_localisation);
 
         LinearLayout llLeft = findViewById(R.id.ll_left);
         LinearLayout llTop = findViewById(R.id.ll_top);
@@ -41,6 +46,7 @@ public class MapsActivity extends AppCompatActivity {
         Button btnBack = findViewById(R.id.btn_back);
 
         String request = getIntent().getStringExtra("request");
+        String nameShop = getIntent().getStringExtra("nameShop");
 
         llLeft.setOnDragListener(dragListener);
         llTop.setOnDragListener(dragListener);
@@ -48,7 +54,7 @@ public class MapsActivity extends AppCompatActivity {
         ivhere.setOnTouchListener(onTouchListener);
         Animation zoomAnimation = AnimationUtils.loadAnimation(MapsActivity.this, R.anim.zoom);
         ivhere.startAnimation(zoomAnimation);
-        tv_here.startAnimation(zoomAnimation);
+        tvHere.startAnimation(zoomAnimation);
 
         Animation alphaAnimation = AnimationUtils.loadAnimation(MapsActivity.this, R.anim.alpha);
 
@@ -59,6 +65,46 @@ public class MapsActivity extends AppCompatActivity {
 
         } else if (request != null && request.equals("home")) {
             ivHome.startAnimation(alphaAnimation);
+        }
+
+        if (nameShop != null && (nameShop.equals("A1") || nameShop.equals("A2"))) {
+            tvLocalisation.setVisibility(View.VISIBLE);
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -550).setDuration(400).start();
+                    ObjectAnimator.ofFloat(ivRobot, "translationX", 0, -150).setDuration(400).start();
+
+
+                }
+            }, SPLASH_TIME_OUT);
+        }
+        if (nameShop != null && (nameShop.equals("B1") || nameShop.equals("B2") || nameShop.equals("B3"))) {
+            tvLocalisation.setVisibility(View.VISIBLE);
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -700).setDuration(400).start();
+
+
+                }
+            }, SPLASH_TIME_OUT);
+
+        }
+        if (nameShop != null && (nameShop.equals("C1") || nameShop.equals("C2"))) {
+            tvLocalisation.setVisibility(View.VISIBLE);
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    ObjectAnimator.ofFloat(ivRobot, "translationY", 0, -350).setDuration(400).start();
+                    ObjectAnimator.ofFloat(ivRobot, "translationX", 0, 150).setDuration(400).start();
+
+
+                }
+            }, SPLASH_TIME_OUT);
         }
 
 

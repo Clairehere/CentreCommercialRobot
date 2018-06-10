@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
+    public boolean mListActivity = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,17 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ListActivity.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mListActivity = true;
+                Intent intent = new Intent(ListActivity.this, MapsActivity.class);
+                ItemsModel nameShop = shopList.get(position);
+                intent.putExtra("nameShop", nameShop.getLocalisation());
                 startActivity(intent);
             }
         });

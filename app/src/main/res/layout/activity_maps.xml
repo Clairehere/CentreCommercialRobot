@@ -12,7 +12,7 @@
         android:layout_height="174dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_caddy1">
@@ -311,7 +311,7 @@
         android:layout_height="56dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_left"
         app:srcCompat="@drawable/caddy" />
@@ -332,14 +332,10 @@
         android:layout_width="77dp"
         android:layout_height="80dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
-        app:layout_constraintEnd_toStartOf="@+id/ll_right"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toEndOf="@+id/ll_left"
-        app:layout_constraintTop_toBottomOf="@+id/ll_top"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_right"
         app:srcCompat="@drawable/icons8_accueil_64" />
 
     <Button
@@ -392,7 +388,7 @@
     <Button
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
-        android:layout_height="34dp"
+        android:layout_height="44dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/btn"
@@ -400,5 +396,36 @@
         app:layout_constraintBottom_toTopOf="@+id/tv_teleportation"
         app:layout_constraintTop_toBottomOf="@+id/iv_caddy2"
         tools:layout_editor_absoluteX="7dp" />
+
+    <ImageView
+        android:id="@+id/iv_robot"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icons8_robot_3_80" />
+
+    <TextView
+        android:id="@+id/tv_localisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Suivez moi"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/iv_robot"
+        app:layout_constraintEnd_toStartOf="@+id/ll_right"
+        app:layout_constraintStart_toEndOf="@+id/ll_left" />
 
 </android.support.constraint.ConstraintLayout>

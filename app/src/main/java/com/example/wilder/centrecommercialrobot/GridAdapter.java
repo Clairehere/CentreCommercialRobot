@@ -67,16 +67,7 @@ public class GridAdapter extends BaseAdapter implements Filterable {
 
 
 
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-
-                Intent intent = new Intent(mContext, ListActivity.class);
-
-                mContext.startActivity(intent);
-            }
-        });
 
 
         return convertView;

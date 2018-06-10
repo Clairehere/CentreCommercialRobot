@@ -20,7 +20,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MapsActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 900;
+    private static int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,10 @@ public class MapsActivity extends AppCompatActivity {
         LinearLayout llTop = findViewById(R.id.ll_top);
         LinearLayout llRight = findViewById(R.id.ll_right);
 
+        Button btnList = findViewById(R.id.btn_list);
+        Button btnBack = findViewById(R.id.btn_back);
+
+        String request = getIntent().getStringExtra("request");
 
         llLeft.setOnDragListener(dragListener);
         llTop.setOnDragListener(dragListener);
@@ -48,22 +52,28 @@ public class MapsActivity extends AppCompatActivity {
 
         Animation alphaAnimation = AnimationUtils.loadAnimation(MapsActivity.this, R.anim.alpha);
 
-        String request = getIntent().getStringExtra("request");
-
         if (request != null && request.equals("caddy")) {
             ivCaddy1.startAnimation(alphaAnimation);
             ivCaddy2.startAnimation(alphaAnimation);
 
-        } else if (request != null && request.equals("home")) {
 
+        } else if (request != null && request.equals("home")) {
+            ivHome.startAnimation(alphaAnimation);
         }
 
 
-        Button btnList = findViewById(R.id.btn_list);
         btnList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MapsActivity.this, ListActivity.class);
+                MapsActivity.this.startActivity(intent);
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MapsActivity.this, MainActivity.class);
                 MapsActivity.this.startActivity(intent);
             }
         });
@@ -113,8 +123,6 @@ public class MapsActivity extends AppCompatActivity {
                     }
 
                     break;
-
-
             }
 
             return true;
@@ -123,10 +131,11 @@ public class MapsActivity extends AppCompatActivity {
 
     public void actionMove(String time) {
         final TextView tvTime = findViewById(R.id.tv_teleportation);
+        tvTime.setVisibility(View.VISIBLE);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                tvTime.setVisibility(View.VISIBLE);
+                tvTime.setVisibility(View.INVISIBLE);
             }
         }, SPLASH_TIME_OUT);
 
